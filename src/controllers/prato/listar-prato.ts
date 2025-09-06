@@ -1,6 +1,6 @@
 import { error } from "console";
 import { Controller, HttpRequest, HttpResponse } from "../../interfaces";
-import Prato from "../../models/prato-models";
+import Prato from "../../models/prato-model";
 
 class ListarPratosController implements Controller {
     async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
