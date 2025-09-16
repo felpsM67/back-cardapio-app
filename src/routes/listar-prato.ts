@@ -5,7 +5,7 @@ import ListarPratosController from "../controllers/prato/listar-prato";
 export default (router: Router): void => {
   /**
    * @swagger
-   * /api/pratos:
+   * /api/pratos/{id}:
    *   get:
    *     summary: Lista todos os pratos ou um prato específico
    *     tags: [Pratos]
@@ -24,5 +24,5 @@ export default (router: Router): void => {
    *       500:
    *         description: Erro interno
    */
-  router.get("/pratos", adaptRoute(new ListarPratosController()));
+  router.get("/pratos{/:id}", adaptRoute(new ListarPratosController()));
 };

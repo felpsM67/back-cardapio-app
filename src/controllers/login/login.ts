@@ -9,6 +9,8 @@ export class LoginController implements Controller {
     try {
       const { email, senha } = httpRequest.body;
 
+      
+
       // Verificar se o usuário existe no banco de dados
       const user = await User.findOne({ where: { email } });
       if (!user) {
